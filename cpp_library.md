@@ -43,6 +43,8 @@ target_link_libraries(main ${link_libs})
 
 [Cmake链接静态库](https://blog.csdn.net/ox0080/article/details/96453985)
 
+[静态库动态库区别](https://zhuanlan.zhihu.com/p/71372182)
+
 
 ## 编译时遇到的问题:
 (1) qsort函数:invalid use of non-static member (非法调用非静态成员)
