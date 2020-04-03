@@ -39,7 +39,14 @@ target_link_libraries(main ${link_libs})
 
 ## 相关链接:
 [cmake编译全记录](https://blog.csdn.net/qq_34759481/article/details/84023233)
+
 [Cmake链接静态库](https://blog.csdn.net/ox0080/article/details/96453985)
+
+
+## 编译时遇到的问题:
+(1) qsort函数:invalid use of non-static member (非法调用非静态成员)
+qsort的参数里面会需要自定义一个<比较函数>,用于排序的规则.这个<比较函数>必须为静态成员,因为:非静态成员函数是依赖于具体对象的，而qsort这类函数是全局的，因此无法在qsort中调用非静态成员函数.<<<静态成员函数或者全局函数是不依赖于具体对象的，可以独立访问，不用创建对象实例就可以访问>>>.同时，静态成员函数不能调用类的非静态成员。
+
 
 
 
